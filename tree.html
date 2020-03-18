@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Tree</title>
+</head>
+<body>
+<script>
+  let row = 15;
+  for(let i = 1; i <= row; i++){
+    for(let j = 1; j <=i; j++){
+      document.write("* ");
+    }
+      document.write("<br/>");
+  }
+
+  let row1 = 15;
+  for(let i = 1; i <= row; i++){
+    for(let j = 1; j <= (row + 1 - i); j++){
+      document.write("* ");
+    }
+    document.write("<br/>");
+  }
+
+  let row2 = 15;
+  for(let i = 1; i <= row2; i++){
+    for(let k = 1; k <= ( row2 + 150 - i); k++){
+      document.write("&nbsp;");
+    }
+    for(let j = 1; j <= i; j++){
+      document.write("* ");
+    }
+    document.write("<br/>");
+  }
+
+</script>
+</body>
+</html>
