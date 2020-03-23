@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>
+    arajadranq2
+  </title>
+</head>
+<body>
+  <script>
+    let a = +prompt("enter your firs number");
+    let b = +prompt('enter your second number');
+    let c; 
+    let d;
+    if(a > b){
+      c = a;
+      d = b;
+    }else if(b > a){
+      c = b;
+      d = a;
+    }
+    if(isNaN(a || b)){
+      alert('you have wrote something wrong');
+    }else{
+      while(d <= c){
+        if(d % 2 == 1){
+          document.write(d+", ");
+        }
+        d++;
+      }
+    }
+  </script>
+</body>
+</html>

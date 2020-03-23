@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>arajadranq 3</title>
+</head>
+<body>
+  <script>
+    const a = +prompt('enter your first number');
+    const b = +prompt('enter your second number');
+    const c = +prompt('enter your third number');
+    if(isNaN(a) || isNaN(b) || isNaN(c)){
+      alert('you have written something wrong');
+    }else{
+      if(a >= b && a >= c){
+        alert(a);
+      }else if(b >= a && b >= c){
+        alert(b);
+      }else if(c >= a && c >= b){
+        alert(c);
+      }
+    }
+  </script>
+</body>
+</html>

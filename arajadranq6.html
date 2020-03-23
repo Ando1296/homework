@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>
+    arajadranq 6
+  </title>
+</head>
+<body>
+  <script>
+    let result = '';
+    let a = 0;
+    let b = 1;
+    let c = +prompt('enter your number here');
+    if(isNaN(c)){
+      alert('you have written something wrong');
+    }else {
+      while(b < c){
+        result += b + ' ';
+        const d = b;
+        b += a;
+        a = d;
+      }
+      document.write(result);
+    }
+  </script>
+</body>
+</html>
