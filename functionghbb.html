@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    function gumarum hanum bazmapatkum ev bajanum
+  </title>
+</head>
+<body>
+  <script>
+    let tiv1 = +prompt('enter your first number here');
+    let tiv2 = +prompt('enter your second number here');
+    function gumarum(a, b){
+      return a + b;
+    }
+    function hanum(a, b){
+      return a - b;
+    }
+    function bazmapatkum(a, b){
+      return a * b;
+    }
+    function bajanum(a, b){
+      return a / b;
+    }
+    if(isNaN(tiv1) || isNaN(tiv2)){
+      alert('you have written something wrong')
+    }else {
+      document.write(`${tiv1} + ${tiv2} = ${gumarum(tiv1, tiv2)},<br>`);
+      document.write(` ${tiv1} - ${tiv2} = ${hanum(tiv1, tiv2)},<br>`);
+      document.write(` ${tiv1} * ${tiv2} = ${bazmapatkum(tiv1, tiv2)},<br>`);
+      document.write(` ${tiv1} / ${tiv2} = ${bajanum(tiv1, tiv2)}:<br>`);
+    }
+  </script>
+</body>
+</html>

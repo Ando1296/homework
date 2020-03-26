@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>celsius and farenhaeit</title>
+</head>
+<body>
+  <script>
+    let celsius = +prompt('enter your number of celsius');
+    let farenheit = +prompt('enter your farenheit number');
+    function celfaren(a, b){
+      a = a * 5/9 + 32;
+      b = (b - 32) * 5/9;
+      return `your numbers are equal to ${a} farenheit and ${b} celsius`
+    }
+    if(isNaN(celsius) || isNaN(farenheit)){
+      alert('you have wrote something wrong');
+    }else{
+      document.write(celfaren(celsius, farenheit));
+    }
+  </script>
+</body>
+</html>
