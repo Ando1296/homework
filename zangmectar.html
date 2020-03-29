@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zangvaci mecaguyn tarr</title>
+</head>
+<body>
+  <script>
+    // prompt  ֆունկցիայի միջոցով ստանալ զանգվածի քանակը։ Հետո մուտքագրված քանակով բացել prompt֊ներ և լցնել զանգվածի մեջ։ Գտնել զանգվածի մեծագույն տարը։ 
+    let amount = [];
+    const len = +prompt('enter your arrays length');
+    for (let i = 0; i < len; i++){
+      amount[i] = +prompt('enter');
+    }
+    let mecTiv = amount[0];
+    for(let i = 0; i < len; i++){
+      if(mecTiv < amount[i]){
+        mecTiv = amount[i]
+      }
+    }
+    console.log(mecTiv);
+  </script>
+</body>
+</html>

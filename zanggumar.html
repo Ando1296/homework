@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>zangvacneri gumar</title>
+</head>
+<body>
+  <script>
+    //Գրել ծրագիր, որ երկու զանգված կգումարի իրար։ Այսինքն ունենք զանգված մեկ ում 1,2,3 , զանգված երկուսում  4,5,6 ստանանք նոր զանգված որտեղ կլինի 1,2,3,4,5,6 արժեքները։  ( P.S. Խորամանկների համար :smile: չօգտագօրծել concat ֆունկցիան  ) 
+    let amount1 = [];
+    const len1 = +prompt('enter your first arrays size');
+    for(let i = 0; i < len1; i++){
+      amount1[i] = +prompt('enter your first arrays numbers');
+    }
+    let amount2 = [];
+    const len2 = +prompt('enter your second arrays size');
+    for(let i = 0; i < len2; i++){
+      amount2[i] = +prompt('enter your second arrays numbers');
+      amount1.push(amount2[i]);
+    } 
+    console.log(amount1);
+
+  </script>
+</body>
+</html>

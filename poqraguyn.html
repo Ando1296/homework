@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>zangvaci poqraguyn tiv</title>
+</head>
+<body>
+  <script>
+    //prompt  ֆունկցիայի միջոցով ստանալ զանգվածի քանակը։ Հետո մուտքագրված քանակով բացել prompt֊ներ և լցնել զանգվածի մեջ։ Գտնել զանգվածի փոքրագույն տարը։
+        let amount = [];
+    const len = +prompt('enter your arrays length');
+    for (let i = 0; i < len; i++){
+      amount[i] = +prompt('enter');
+    }
+    let pTiv = amount[0];
+    for(let i = 0; i < len; i++){
+      if(pTiv > amount[i]){
+        pTiv = amount[i];
+      }
+    }
+    console.log(pTiv);
+  </script>
+</body>
+</html>
