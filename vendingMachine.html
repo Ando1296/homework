@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title>Vending machine</title>
+</head>
+<body>
+  <script>
+    let adding;
+    let enteredDrink;
+    let code;
+    let choice;
+    let money;
+    let enteredCode;
+    let listOfDrinks = '';
+    let vendingMachine;
+    vendingMachine = 
+    {
+      coffeMachine: 
+      [
+        {
+          drink: 'Coffee',
+          price: 100,
+          quantity: 10,
+          code: 'a1',
+        },
+        {
+          drink: 'Tea',
+          price: 200,
+          quantity: 30,
+          code: 'a2',
+        },
+        {
+          drink: 'Juice',
+          price: 500,
+          quantity: 0,
+          code: 'a3',
+        },
+      ]
+    }
+
+      for(let i = 0; i < vendingMachine.coffeMachine.length; i++)
+      {
+        listOfDrinks += vendingMachine.coffeMachine[i].drink + ' price' + vendingMachine.coffeMachine[i].price  + ' code ' + vendingMachine.coffeMachine[i].code + ' '
+      }
+      while(5 == 5)
+    {
+      choice = +prompt('enter 1 to buy enter 2 to add');
+      if(choice == 1)
+      {
+        code = prompt('enter your drinks code ' + listOfDrinks);
+        for(let i = 0; i < vendingMachine.coffeMachine.length; i++)
+        {
+          if(code == vendingMachine.coffeMachine[i].code)
+          {
+            enteredDrink = vendingMachine.coffeMachine[i];
+            break;
+          }
+        }
+        if(enteredDrink.quantity == 0)
+        {
+          alert('sorry we dont have ' + enteredDrink.drink);
+        }else
+        {
+          money = +prompt('enter your money');
+          if(money < enteredDrink.price)
+          {
+            alert('sorry you dont have enough money');
+          }else
+          {
+            for(let i = 0; i < vendingMachine.coffeMachine.length; i++)
+            {
+              if(enteredDrink.code == vendingMachine.coffeMachine[i].code)
+              {
+                vendingMachine.coffeMachine[i].quantity -= 1;
+                break;
+              }
+            }
+            alert('take your ' + enteredDrink.drink +' your change is ' + (money - enteredDrink.price));
+          }
+        }
+      }else if(choice == 2)
+      {
+        code = prompt('enter your drinks code ' + listOfDrinks);
+        for(let i = 0; i < vendingMachine.coffeMachine.length; i++)
+        {
+          if(code == vendingMachine.coffeMachine[i].code)
+          {
+            adding = +prompt('enter how much you want to add ' + vendingMachine.coffeMachine[i].drink);
+            vendingMachine.coffeMachine[i].quantity += adding;
+            alert(vendingMachine.coffeMachine[i].drink + ' now is ' + vendingMachine.coffeMachine[i].quantity);
+            break;
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
