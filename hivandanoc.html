@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>hivandanoc</title>
+</head>
+<body>
+<script>
+  let clients = [
+  {
+    login : 'armen',
+    pasword : 'armen12'
+  },
+  {
+    login : 'artyom',
+    pasword: 'artyom96',
+  },
+  {
+    login : 'anushik',
+    pasword : 'anushik92',
+  }
+  ];
+  let sympthoms = ['jermutyun haz', 'odi anbavararutyun mashki karmrutyun', 'qor amboxj marmnov'];
+  let bujum = [`duq varaqvel eq nor covid -19 ov vaxenam duq mernelu eq sireli ${clients[0].login}`,`dzer mot voch mi varaq chi handipel duq uxaki alergia uneq cirani caxkac caxikneric`, `dzer mot haytnabervel e jrcaxik zelyonka qseq`]
+  while(true){
+    let enterence = prompt('enter your login,pasword');
+    for(let i = 0; i < clients.length; i++){
+      if(enterence == clients[i].login + "," + clients[i].pasword){
+        alert('your symtoms are ' + sympthoms[i]);
+        alert(bujum[i]);
+
+      }
+    }
+  }
+</script>
+</body>
+</html>
