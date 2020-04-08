@@ -1,0 +1,172 @@
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    div{
+      text-align: center;
+    }
+    body{
+      background-color: lightblue;
+    }
+    input{
+      width: 125;
+    }
+    .action{
+      width: 25;
+      margin: 2;
+    }
+    .action1{
+      width: 58;
+      margin: 2;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" id="answar">
+  <br>
+  <button class="action" id="actionc">C</button>
+  <button class="action" id="actiondev">/</button>
+  <button class="action" id="actionmult">*</button>
+  <button class="action" id="actionmin">-</button>
+  <br>
+  <button class="action" id="number7">7</button>
+  <button class="action" id="number8">8</button>
+  <button class="action" id="number9">9</button>
+  <button class="action" id="actionplus">+</button>
+  <br>
+  <button class="action" id="number4">4</button>
+  <button class="action" id="number5">5</button>
+  <button class="action" id="number6">6</button>
+  <button class="action" id="numberpoint">.</button>
+  <br>  
+  <button class="action" id="number1">1</button>
+  <button class="action" id="number2">2</button>
+  <button class="action" id="number3">3</button>
+  <button class="action" id="number0">0</button>
+  <br>  
+  <button class="action1" id="delete"><</button>
+  <button class="action1" id="equal">=</button>
+
+</div>
+<input type="text" id="historycalculator" style="width: 100%;">
+<script>
+  let historyCalculator = document.querySelector('#historycalculator');
+  let history = '';
+  let plusa;
+  let mina;
+  let deva;
+  let multa;
+  let b;
+  let c;
+  let actionC = document.querySelector('#actionc');
+  let actionDev = document.querySelector('#actiondev');
+  let actionMult = document.querySelector('#actionmult');
+  let actionMin = document.querySelector('#actionmin');
+  let actionPlus = document.querySelector('#actionplus');
+  let number1 = document.querySelector('#number1');
+  let number2 = document.querySelector('#number2');
+  let number3 = document.querySelector('#number3');
+  let number4 = document.querySelector('#number4');
+  let number5 = document.querySelector('#number5');
+  let number6 = document.querySelector('#number6');
+  let number7 = document.querySelector('#number7');
+  let number8 = document.querySelector('#number8');
+  let number9 = document.querySelector('#number9');
+  let number0 = document.querySelector('#number0');
+  let numberPoint = document.querySelector('#numberpoint');
+  let answar = document.querySelector('#answar');
+  let actionDel = document.querySelector('#delete');
+  let actionEqual = document.querySelector('#equal');
+  
+  number1.addEventListener('click', function(){
+    answar.value += '1';
+  });
+  number2.addEventListener('click', function(){
+    answar.value += '2';
+  });
+  number3.addEventListener('click', function(){
+    answar.value += '3';
+  });
+  number4.addEventListener('click', function(){
+    answar.value += '4';
+  });
+  number5.addEventListener('click', function(){
+    answar.value += '5';
+  });
+  number6.addEventListener('click', function(){
+    answar.value += '6';
+  });
+  number7.addEventListener('click', function(){
+    answar.value += '7';
+  });
+  number8.addEventListener('click', function(){
+    answar.value += '8';
+  });
+  number9.addEventListener('click', function(){
+    answar.value += '9';
+  });
+  actionC.addEventListener('click', function(){
+    answar.value = '';
+  });
+  number0.addEventListener('click', function(){
+    answar.value += '0';
+  });
+  numberPoint.addEventListener('click', function(){
+    answar.value += '.';
+  });
+  actionMult.addEventListener('click', function(){
+    multa = +answar.value;
+    answar.value = '';
+    plusa = null;
+    mina = null;
+    deva = null;
+  });
+  actionMin.addEventListener('click', function(){
+    mina = +answar.value;
+    answar.value = '';
+    plusa = null;
+    deva = null;
+    multa = null;
+  });
+  actionPlus.addEventListener('click', function(){
+    plusa = +answar.value;
+    answar.value = '';
+    mina = null;
+    deva = null;
+    multa = null;
+  });
+  actionDev.addEventListener('click', function(){
+    deva = +answar.value;
+    answar.value = '';
+    mina = null;
+    plusa = null;
+    multa = null;
+  });
+  actionEqual.addEventListener('click', function(){
+    b = +answar.value;
+    if(plusa != null){
+      c = plusa + b;
+      history += `${plusa} + ${b} = ${c}, `;
+    }else if(mina != null){
+      c = mina + b;
+      history += `${mina} - ${b} = ${c}, `;
+    }else if(deva != null){
+      c = deva / b;
+      history += `${deva} / ${b} = ${c}, `;
+    }else if(multa != null){
+      c = multa * b;
+      history += `${multa} * ${b} = ${c}, `;
+    }
+    answar.value = c;
+    historyCalculator.value = history;
+    
+  })
+
+</script>
+
+
+
+
+</body>
+</html>
