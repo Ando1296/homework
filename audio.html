@@ -1,0 +1,134 @@
+<html>
+<head>
+  <title>Some audio</title>
+</head>
+<body style="background-color: lightblue">
+  <audio id="sound1">
+    <source src="bd.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound2">
+    <source src="crash.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound3">
+    <source src="hhc.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound4">
+    <source src="hho.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound5">
+    <source src="ride.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound6">
+    <source src="rim.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound7">
+    <source src="sd.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound8">
+    <source src="tomh.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound9">
+    <source src="toml.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sound10">
+    <source src="tomm.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="scorpions">
+    <source src="maybe.mp3" type="audio/mpeg">
+  </audio>
+  <button class="button" id='s1'>Sound 1 press 1</button>
+  <button class="button" id="s2">Sound 2 press 2</button>
+  <button class="button" id="s3">Sound 3 press 3</button>
+  <button class="button" id="s4">Sound 4 press 4</button>
+  <button class="button" id="s5">Sound 5 press 5</button>
+  <button class="button" id="s6">Sound 6 press 6</button>
+  <button class="button" id="s7">Sound 7 press 7</button>
+  <button class="button" id="s8">Sound 8 press 8</button>
+  <button class="button" id="s9">Sound 9 press 9</button>
+  <button class="button" id="s10">Sound 10 press +</button>
+  <button id="s11">Song press s</button>
+  <input type="text" id="key">
+  
+  <script>
+  let inputelement = document.querySelector('#key');
+  let button1 = document.querySelector('#s1');
+  let button2 = document.querySelector('#s2');
+  let button3= document.querySelector('#s3');
+  let button4 = document.querySelector('#s4');
+  let button5 = document.querySelector('#s5');
+  let button6 = document.querySelector('#s6');
+  let button7 = document.querySelector('#s7');
+  let button8 = document.querySelector('#s8');
+  let button9 = document.querySelector('#s9');
+  let button10 = document.querySelector('#s10');
+  let sound1 = document.querySelector('#sound1');
+  let sound2 = document.querySelector('#sound2');
+  let sound3 = document.querySelector('#sound3');
+  let sound4 = document.querySelector('#sound4');
+  let sound5 = document.querySelector('#sound5');
+  let sound6 = document.querySelector('#sound6');
+  let sound7 = document.querySelector('#sound7');
+  let sound8 = document.querySelector('#sound8');
+  let sound9 = document.querySelector('#sound9');
+  let sound10 = document.querySelector('#sound10');
+  let scorpions = document.querySelector('#scorpions')
+  button1.addEventListener('click', function(){
+    sound1.play();
+  })
+  button2.addEventListener('click', function(){
+    sound2.play();
+  })
+  button3.addEventListener('click', function(){
+    sound3.play()
+  })
+  button4.addEventListener('click', function(){
+    sound4.play()
+  })
+  button5.addEventListener('click', function(){
+    sound5.play()
+  })
+  button6.addEventListener('click', function(){
+    sound6.play()
+  })
+  button7.addEventListener('click', function(){
+    sound7.play()
+  })
+  button8.addEventListener('click', function(){
+    sound8.play()
+  })
+  button9.addEventListener('click', function(){
+    sound9.play()
+  })
+  button10.addEventListener('click', function(){
+    sound10.play()
+  })
+  inputelement.addEventListener('keyup', function(event){
+    if(event.key == 1){
+      sound1.play()
+    }else if(event.key == 2){
+      sound2.play()
+    }else if(event.key ==3) {
+      sound3.play()
+    }else if(event.key == 4){
+      sound4.play()
+    }else if(event.key == 5){
+      sound5.play()
+    }else if(event.key == 6){
+      sound6.play()
+    }else if(event.key == 7){
+      sound7.play()
+    }else if(event.key == 8){
+      sound8.play()
+    }else if(event.key == 9){
+      sound9.play()
+    }else if(event.key == "+"){
+      sound10.play()
+    }else if(event.key == 's'){
+      scorpions.play();
+    }
+  })
+
+  </script>
+
+</body>
+</html>
