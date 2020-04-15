@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>foreach filter map reduce</title>
+</head>
+<body>
+  <p>Enter driver name</p>
+  <input type="text" id="driver">
+  <p>Enter Car's year</p>
+  <input type="text" id="carsYear" name="Enter Cars year">
+  <p>Enter Car's mark</p>
+  <input type="text" id="carsMark">
+  <button id="add">Avelacnel</button>
+  <br>
+  <img src="bmw.jpg" width="100%">
+  <img src="mersedes2020.jpg" width="100%">
+  <img src="lexus2000.jpg" width="100%" >
+  <img src="audi.jpg" width="100%">
+  <script>
+let people = [];
+let driverName = document.querySelector('#driver');
+let carsYear = document.querySelector('#carsYear');
+let carsMark = document.querySelector('#carsMark');
+let avelacnel = document.querySelector('#add');
+avelacnel.addEventListener('click', function(){
+  people.push({
+    owner: driverName.value,
+    car: carsMark.value,
+    year: carsYear.value ,
+  })
+  console.log(people);
+});
+const cars = [
+    {
+        model: 'MERCEDES BENZ',
+        year: 2020,
+        owner: 0,
+        service: 1,
+    },
+    {
+        model: 'BMW',
+        year: 2015,
+        owner: 1,
+        service: 1,
+    },
+    {
+        model: 'AUDI',
+        year: 2001,
+        owner: 0,
+        service: 0,
+    },
+    {
+        model: 'LEXUS',
+        year: 2000,
+        owner: 2,
+        service: 0,
+    }
+]
+const owner = [
+    {
+        name: 'Armen',
+        index: 0,
+    },
+    {
+        name: 'Narek',
+        index: 1,
+    },
+    {
+        name: 'Hayk',
+        index: 2,
+    }
+]
+const service = [
+    {
+        serviceName: 'Mec Aniv',
+        index: 0,
+    },
+    {
+        serviceName: 'Poqr Aniv',
+        index: 1,
+    },
+];
+let xndir1 = service.filter(name => name.index === 0).map(name => name.serviceName);
+xndir1.push(cars.filter(name => name.service === 0).map(name => name.model));
+let xndir11 = service.filter(name => name.index === 1).map(name => name.serviceName);
+xndir11.push(cars.filter(name => name.service === 1).map(name => name.model));
+console.log(xndir1);
+console.log(xndir11);
+//2
+let narekCars = owner.filter(index => index.name === 'Narek').map(index => index.name);
+narekCars.push(cars.filter(name => name.owner === 1).map(name => name.model));
+console.log(narekCars); 
+//3
+let tenYearsOld = cars.filter(name => 2020 - name.year > 10).map(element => element.model)
+console.log(tenYearsOld);
+//5
+cars.map(element => {
+  element.year++;
+  return element;
+})
+
+
+
+</script>
+</body>
+</html>
+
